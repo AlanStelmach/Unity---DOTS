@@ -366,8 +366,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   personPrefab: {fileID: 3044779251883626156, guid: 498d3b383c2df9f47b17dfa0d7bf0ee2, type: 3}
-  gridSize: 0
-  spread: 0
+  gridSize: 100
+  spread: 5
+  speedRange: {x: 4, y: 7}
 --- !u!4 &1941283844
 Transform:
   m_ObjectHideFlags: 0
