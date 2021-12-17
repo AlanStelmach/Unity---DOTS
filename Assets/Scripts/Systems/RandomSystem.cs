@@ -7,7 +7,7 @@ using Unity.Mathematics;
 using Unity.Transforms;
 
 [UpdateInGroup(typeof(InitializationSystemGroup))]
-public class NewSystem : SystemBase
+public class RandomSystem: SystemBase
 {
     public NativeArray<Unity.Mathematics.Random> RandomArray { get; private set; }
 
