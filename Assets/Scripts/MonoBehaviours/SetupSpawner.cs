@@ -10,6 +10,7 @@ public class SetupSpawner : MonoBehaviour
     [SerializeField] private int spread;
     private BlobAssetStore blob;
     [SerializeField] private Vector2 speedRange = new Vector2(4, 7);
+    [SerializeField] private Vector2 lifetimeRange = new Vector2(10, 60);
 
     private void Start()
     {
@@ -27,6 +28,8 @@ public class SetupSpawner : MonoBehaviour
                 entityManager.SetComponentData(instance, new Destination {Value = position}); // Comment this line to make objects travel to the center of the scene
                 float speed = UnityEngine.Random.Range(speedRange.x, speedRange.y);
                 entityManager.SetComponentData(instance, new MovementSpeed {Speed = speed});
+                float lifetime = UnityEngine.Random.Range(lifetimeRange.x, lifetimeRange.y);
+                entityManager.SetComponentData(instance, new Lifetime {Value = lifetime});
             }
         }
     }
