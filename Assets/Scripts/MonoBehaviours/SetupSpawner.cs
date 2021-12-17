@@ -24,7 +24,7 @@ public class SetupSpawner : MonoBehaviour
                 var instance = entityManager.Instantiate(entity);
                 float3 position = new float3(x * spread, 0, z * spread);
                 entityManager.SetComponentData(instance, new Translation {Value = position});
-                entityManager.SetComponentData(instance, new Destination {Value = position});
+                entityManager.SetComponentData(instance, new Destination {Value = position}); // Comment this line to make objects travel to the center of the scene
                 float speed = UnityEngine.Random.Range(speedRange.x, speedRange.y);
                 entityManager.SetComponentData(instance, new MovementSpeed {Speed = speed});
             }
